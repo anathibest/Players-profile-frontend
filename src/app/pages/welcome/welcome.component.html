@@ -1,1 +1,11 @@
-<p>welcome works!</p>
+<div class="home__mainbar">
+    <div class="cards">
+        <div class="card" *ngFor="let tenant of tenants">
+                
+                    <h5 class="tenant">{{tenant.title}}</h5>
+                    <div class="tenant">{{tenant.category}}</div>
+                    <div class="tenant">R{{tenant.price}} </div>
+                </div>
+            
+    </div>
+</div>
