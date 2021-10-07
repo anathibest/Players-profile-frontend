@@ -1,11 +1,39 @@
-<div class="home__mainbar">
-    <div class="cards">
-        <div class="card" *ngFor="let tenant of tenants">
-                
-                    <h5 class="tenant">{{tenant.title}}</h5>
-                    <div class="tenant">{{tenant.category}}</div>
-                    <div class="tenant">R{{tenant.price}} </div>
-                </div>
-            
+
+<!-- <div class= "clients__container" style="margin-top: 80px;">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100" *ngFor="let tenant of tenants">
+        <img src="https://mdbootstrap.com/img/new/standard/city/044.jpg"class="card-img-top"alt="..."/>
+        <div class="card-body" >
+          <h5 class="card-text">Name: {{tenant.name}}</h5>
+          <h4 class="card-text">Contact: {{tenant.phone}}</h4>
+          <h4 class="card-text"> Email: {{tenant.email}}</h4>
+          <button type="button" class="fa fa-trash" style="color: teal;"></button>
+        <button type="button" class="fa fa-edit" style="color: teal;"></button>
+        </div>
+      </div>
+    </div> -->
+<section>
+    <div class="clients__container" style="margin-top: 80px;">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="card h-100">
+		<div class="many__boxes">
+				<div class="one__box" *ngFor="let tenant of tenants">
+					<div class="card-body" >
+                        <img src="https://mdbootstrap.com/img/new/standard/city/044.jpg"class="card-img-top"alt="..."/>
+						<div class="box__text">
+							<p><strong>{{ tenant.name | titlecase }}</strong></p>
+                            <p><strong>{{ tenant.phone | titlecase }}</strong></p>
+							<p>{{ tenant.email }}</p>
+						</div>
+					</div>
+				</div>
+            </div>
+		</div>
     </div>
-</div>
+	</div>
+</section>
+
+    
+    
+    

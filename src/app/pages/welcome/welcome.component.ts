@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TenantService } from 'src/app/services/tenants.service';
+
 
 
 
@@ -8,11 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
+  tenantModel: any;
 
-  constructor() { }
+  constructor(public __tenentService:  TenantService) { }
   tenants: any = {};
 
-  ngOnInit(): void {
+  async ngOnInit()  
+  {
+    
+    this.tenants = await this.__tenentService.getAllTenants();
+    console.log(await this.__tenentService.getAllTenants());
+    
   }
 
+
+  
 }
