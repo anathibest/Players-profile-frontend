@@ -1,38 +1,31 @@
 
-<!-- <div class= "clients__container" style="margin-top: 80px;">
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card h-100" *ngFor="let tenant of tenants">
-        <img src="https://mdbootstrap.com/img/new/standard/city/044.jpg"class="card-img-top"alt="..."/>
-        <div class="card-body" >
-          <h5 class="card-text">Name: {{tenant.name}}</h5>
-          <h4 class="card-text">Contact: {{tenant.phone}}</h4>
-          <h4 class="card-text"> Email: {{tenant.email}}</h4>
-          <button type="button" class="fa fa-trash" style="color: teal;"></button>
-        <button type="button" class="fa fa-edit" style="color: teal;"></button>
+<div class="d-flex" style="margin-top: 80px;" *ngFor="let tenant of tenants">
+    <!-- Card -->
+    <mdb-card
+      style="background-image: url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/93654608.jpg?k=322c85317da73d34a4cf416559c6514554885fe9d35baab4ab3d5eea33b78284&o=&hp=1')"
+      class="card-image mb-3 mx-2">
+      <!-- Content -->
+      <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4" >
+        <div>
+          <h3 class="pink-text">
+            <mdb-icon fas icon="user"> </mdb-icon> {{tenant.name}} </h3>
+          <h5 class="card-title pt-2">Contact : <strong>{{tenant.phone}}</strong></h5>
+          <h5 class="card-title pt-2">Email : <strong>{{tenant.email}}</strong></h5>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam,
+            voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto nulla
+            ipsum dignissimos. Odit sed qui, dolorum!.
+          </p>
+          <a mdbBtn color="pink" class="waves-light" mdbWavesEffect>
+            <mdb-icon far icon="clone" class="left"></mdb-icon>View tenant</a>
         </div>
       </div>
-    </div> -->
-<section>
-    <div class="clients__container" style="margin-top: 80px;">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="card h-100">
-		<div class="many__boxes">
-				<div class="one__box" *ngFor="let tenant of tenants">
-					<div class="card-body" >
-                        <img src="https://mdbootstrap.com/img/new/standard/city/044.jpg"class="card-img-top"alt="..."/>
-						<div class="box__text">
-							<p><strong>{{ tenant.name | titlecase }}</strong></p>
-                            <p><strong>{{ tenant.phone | titlecase }}</strong></p>
-							<p>{{ tenant.email }}</p>
-						</div>
-					</div>
-				</div>
-            </div>
-		</div>
-    </div>
-	</div>
-</section>
+      <!-- Content -->
+    </mdb-card>
+    <!-- Card -->
+  
+    <!-- Card -->
+    
 
     
     
