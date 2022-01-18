@@ -11,13 +11,13 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './pages/about/about.component';
-import { WelcomeComponent } from './pages/welcome/welcome.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
   AboutComponent,
-  WelcomeComponent
+  HomeComponent,
 	],
 	imports: [
 		BrowserModule,
